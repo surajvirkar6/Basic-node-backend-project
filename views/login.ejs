@@ -1,0 +1,19 @@
+<%- include('./header.ejs', {title: 'Add Event' }) %>
+
+    <div class="container my-3">
+        <form action="/login" method="POST">
+            <div class="col-6">
+                <h3 class="text-center">Login</h3>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input class="form-control" type="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input class="form-control" type="password" name="password" required>
+                </div>
+                <input type="submit" name="submit" id="s" class="btn btn-success">
+                <p class="my-3">New User? <a href="/sign">Sign Up</a></p>
+            </div>
+        </form>
+    </div>

@@ -1,0 +1,23 @@
+<%- include('./header.ejs', {title: 'Add Event' }) %>
+
+    <div class="container my-3">
+        <div class="col-4">
+            <h3 class="text-center my-3">Send invite to your friend.</h3>
+            <form action="/invite" method="post">
+                <div class="mb-3">
+                    <select class="form-select" name="event">
+                        <option selected>Select Event</option>
+                        <% for (var i=0; i < events.length; i++) { %>
+                            <option value="<%= events[i].eventName %>">
+                                <%= events[i].eventName %>
+                            </option>
+                            <% } %>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" type="email" name="email" placeholder="Enter your friends email">
+                </div>
+                <button type="submit" class="btn btn-primary">Send Invite</button>
+            </form>
+        </div>
+    </div>

@@ -1,0 +1,20 @@
+<%- include('./header.ejs', {title: 'Add Event' }) %>
+
+    <div class="container">
+        <h1 class="my-3">Add Event by using following form</h1>
+        <br>
+        <form action="/addEvent" method="post">
+            <div class="col-6">
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="eventName" placeholder="Enter your event name">
+                </div>
+                <div class="mb-3">
+                    <input type="date" class="form-control" name="eventDate" placeholder="Enter your event date">
+                </div>
+                <div class="mb-3">
+                    <textarea type="text" class="form-control" name="eventDescription" placeholder="Enter event description" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Create</button>
+            </div>
+        </form>
+    </div>
